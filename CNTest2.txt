@@ -238,8 +238,8 @@ $ns attach-agent $n5 $p5
 
 # Queue limits to create congestion
 $ns queue-limit $n0 $n4 5
-$ns queue-limit $n1 $n4 5
-$ns queue-limit $n2 $n4 5
+$ns queue-limit $n4 $n5 2
+$ns queue-limit $n2 $n4 3
 
 # Ping callback (prints RTT)
 Agent/Ping instproc recv {from rtt} {
@@ -322,5 +322,6 @@ ns 2.tcl              # run and generate output
 nam 2.nam             # view animation
 gedit 2.awk           # paste AWK script
 awk -f 2.awk 2.tr     # get no. of dropped packets
+
 
 
